@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roadmap Matemáticas PUCP — Demo</title>
+  <meta name="description" content="Roadmap dinámico para cursos, rutas y progreso." />
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <header>
+    <h1>Roadmap Matemáticas PUCP</h1>
+    <p>
+      Marca tu progreso, explora rutas (teórica/aplicada/computacional) y encuentra recursos.
+    </p>
+
+    <!-- Barra de acciones globales -->
+    <nav aria-label="Acciones principales">
+      <button type="button">Guardar</button>
+      <button type="button">Exportar</button>
+      <button type="button">Restablecer</button>
+    </nav>
+  </header>
+
+  <hr />
+
+  <!-- Layout principal: filtros + roadmap + panel de detalle -->
+  <main>
+    <!-- Filtros -->
+    <section aria-labelledby="filtros-title">
+      <h2 id="filtros-title">Filtros</h2>
+
+      <form>
+        <!-- Track / ruta -->
+        <fieldset>
+          <legend>Ruta</legend>
+          <label>
+            <input type="radio" name="track" value="todas" checked />
+            Todas
+          </label>
+          <label>
+            <input type="radio" name="track" value="teorica" />
+            Teórica
+          </label>
+          <label>
+            <input type="radio" name="track" value="aplicada" />
+            Aplicada
+          </label>
+          <label>
+            <input type="radio" name="track" value="computacional" />
+            Computacional
+          </label>
+        </fieldset>
+
+        <!-- Estado -->
+        <fieldset>
+          <legend>Estado</legend>
+          <label>
+            <input type="checkbox" name="estado" value="pendiente" checked />
+            Pendiente
+          </label>
+          <label>
+            <input type="checkbox" name="estado" value="en-curso" checked />
+            En curso
+          </label>
+          <label>
+            <input type="checkbox" name="estado" value="aprobado" checked />
+            Aprobado
+          </label>
+        </fieldset>
+
+        <!-- Búsqueda -->
+        <label for="buscar">Buscar curso</label>
+        <input id="buscar" name="buscar" type="search" placeholder="Ej. Cálculo, Álgebra, Probabilidad…" />
+
+        <!-- Área -->
+        <label for="area">Área</label>
+        <select id="area" name="area">
+          <option value="todas">Todas</option>
+          <option value="analisis">Análisis</option>
+          <option value="algebra">Álgebra</option>
+          <option value="estadistica">Probabilidad/Estadística</option>
+          <option value="discreta">Discreta</option>
+          <option value="computacion">Computación</option>
+          <option value="aplicaciones">Aplicaciones</option>
+        </select>
+      </form>
+    </section>
+
+    <hr />
+
+    <!-- Roadmap (malla por ciclos) -->
+    <section aria-labelledby="roadmap-title">
+      <h2 id="roadmap-title">Roadmap por ciclos</h2>
+
+      <!-- Consejo: cada "article" es un ciclo/semestre -->
+      <article aria-labelledby="ciclo-1">
